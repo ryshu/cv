@@ -46,10 +46,13 @@ body {
         display: flex;
         -webkit-flex-flow: column;
         flex-flow: column;
+        -moz-flex-flow: column;
         -webkit-justify-content: space-around;
         justify-content: space-around;
+        -moz-justify-content: space-around;
         -webkit-align-items: center;
-        align-items: center; }
+        align-items: center;
+        -moz-align-items: center; }
         body header .content .title a {
           text-decoration: none;
           text-transform: uppercase;
@@ -129,8 +132,10 @@ body {
     justify-content: center;
     -webkit-align-items: space-around;
     align-items: space-around;
+    -moz-align-items: space-around;
     -webkit-flex-flow: column;
     flex-flow: column;
+    -moz-flex-flow: column;
     position: relative; }
   body .section-1 {
     padding: 100px 50px;
@@ -185,8 +190,10 @@ body {
               display: flex;
               -webkit-justify-content: space-around;
               justify-content: space-around;
+              -moz-justify-content: space-around;
               -webkit-flex-flow: column;
               flex-flow: column;
+              -moz-flex-flow: column;
               height: 250px;
               position: absolute;
               right: 0; }
@@ -213,7 +220,8 @@ body {
         display: -webkit-flex;
         display: flex;
         -webkit-flex-flow: wrap;
-        flex-flow: wrap; }
+        flex-flow: wrap;
+        -moz-flex-flow: wrap; }
         body .section-1 .text .profil h2 {
           width: 100%;
           font-size: 20px;
@@ -231,7 +239,8 @@ body {
         display: -webkit-flex;
         display: flex;
         -webkit-flex-flow: wrap;
-        flex-flow: wrap; }
+        flex-flow: wrap;
+        -moz-flex-flow: wrap; }
         body .section-1 .text .contact h2 {
           width: 100%;
           font-size: 20px;
@@ -256,8 +265,10 @@ body {
           display: flex;
           -webkit-justify-content: space-around;
           justify-content: space-around;
+          -moz-justify-content: space-around;
           -webkit-flex-flow: column;
           flex-flow: column;
+          -moz-flex-flow: column;
           height: 250px;
           width: 20%; }
           body .section-1 .text .contact .links a {
@@ -288,6 +299,7 @@ body {
       body .section-1 .text .contact .links {
         -webkit-flex-flow: wrap;
         flex-flow: wrap;
+        -moz-flex-flow: wrap;
         width: 100%;
         height: 30px; }
         body .section-1 .text .contact .links a {
@@ -303,10 +315,13 @@ body {
       display: flex;
       -webkit-justify-content: space-around;
       justify-content: space-around;
+      -moz-justify-content: space-around;
       -webkit-align-items: center;
       align-items: center;
+      -moz-align-items: center;
       -webkit-flex-flow: wrap;
       flex-flow: wrap;
+      -moz-flex-flow: wrap;
       width: 75%;
       margin: auto;
       padding-bottom: 20px;
@@ -392,8 +407,10 @@ body {
       display: flex;
       -webkit-justify-content: space-around;
       justify-content: space-around;
+      -moz-justify-content: space-around;
       -webkit-flex-flow: wrap;
       flex-flow: wrap;
+      -moz-flex-flow: wrap;
       width: 60vw;
       min-width: 300px;
       margin: auto; }
@@ -442,7 +459,7 @@ body {
                 font-weight: none;
                 font-size: 16px; }
             body .section-3 .block-0 .block-1 .card .content .more {
-              width: 50px;
+              font-size: 3.5em;
               transition: all 250ms ease-in-out; }
         body .section-3 .block-0 .block-1 .card:after {
           content: "";
@@ -463,7 +480,7 @@ body {
             height: auto; }
           body .section-3 .block-0 .block-1 .card:hover .content .more,
           body .section-3 .block-0 .block-1 .card:focus .content .more {
-            width: 60px; }
+            font-size: 3.6em; }
         body .section-3 .block-0 .block-1 .card.deg-1 {
           background-color: #4C4C4C;
           transition: all 0.7s ease-in-out; }
@@ -487,7 +504,8 @@ body {
         display: -webkit-flex;
         display: flex;
         -webkit-justify-content: space-around;
-        justify-content: space-around; }
+        justify-content: space-around;
+        -moz-justify-content: space-around; }
         body .section-3 .skills .skills-content .skills-box {
           width: 350px;
           padding: 50px; }
@@ -528,7 +546,8 @@ body {
   @media screen and (max-width: 800px) {
     body .section-3 .skills .skills-content {
       -webkit-flex-flow: column;
-      flex-flow: column; }
+      flex-flow: column;
+      -moz-flex-flow: column; }
       body .section-3 .skills .skills-content .skills-box {
         padding: 15px; }
         body .section-3 .skills .skills-content .skills-box h2 {
@@ -593,10 +612,13 @@ body {
       display: flex;
       -webkit-justify-content: space-around;
       justify-content: space-around;
+      -moz-justify-content: space-around;
       -webkit-flex-flow: column;
       flex-flow: column;
+      -moz-flex-flow: column;
       -webkit-align-items: center;
       align-items: center;
+      -moz-align-items: center;
       width: 750px;
       min-width: 300px; }
       body footer .content nav a {
@@ -613,8 +635,10 @@ body {
         display: flex;
         -webkit-justify-content: space-around;
         justify-content: space-around;
+        -moz-justify-content: space-around;
         -webkit-align-items: center;
         align-items: center;
+        -moz-align-items: center;
         width: 200px;
         padding: 20px; }
         body footer .content .links a {
@@ -642,33 +666,5 @@ body {
   @media screen and (max-width: 550px) {
     body footer .content nav a {
       margin: 10px; } }
-  body .frame {
-    position: fixed;
-    min-height: 100vh;
-    min-width: 100vw;
-    background: #d1684e;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    transition: all 1s ease-in-out;
-    z-index: 10000; }
-    body .frame #wrap {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      overflow: hidden; }
-    body .frame #wrap canvas {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 500px;
-      height: 500px;
-      margin: -250px 0 0 -250px;
-      -outline: 1px solid #fff; }
 
 /*# sourceMappingURL=default.css.map */
