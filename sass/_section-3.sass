@@ -1,0 +1,183 @@
+.section-3
+	width: 100vw
+	padding: 50px
+
+	box-shadow: 2px 2px $bgc-section-1
+
+	.block-0
+		@include display_flex()
+		@include vendor-prefix(justify-content, space-around)
+		@include vendor-prefix(flex-flow, wrap)
+
+		width: 60vw
+		min-width: 300px
+		margin: auto
+		.block-1
+			@include display_flex()
+
+			.card
+				display: block
+				position: relative
+				width: 300px
+
+				cursor: pointer
+				margin: 0 0 15px 15px
+				box-shadow: 0px 0px 5px rgba(100, 100, 100, 0.7)
+
+				.content
+					@include flex_centered()
+					position: absolute
+					width: 100%
+					height: 100%
+
+					color: #f5f5f5
+					.none-hover
+						display: block
+						opacity: 1
+						height: auto
+
+						font-family: "Bitter" , serif
+						font-size: 20px
+						font-weight: bold
+						text-transform: uppercase
+
+					.hover
+						display: none
+						height: 0
+						margin: 30px
+
+						font-family: serif
+						text-align: justify
+						font-size: 18px
+						
+						h2
+							font-size: 20px
+							margin-bottom: 5px
+							margin-top: 5px
+
+						.para
+							margin-left: 20px
+							font-weight: none
+							font-size: 16px
+
+					.more
+						width: 50px
+						transition: all 250ms ease-in-out
+
+			.card:after
+				content: ""
+				display: block
+				padding-bottom: 80%
+
+			.card:hover,
+			.card:focus
+				box-shadow: 0px 0px 5px rgba(100, 100, 130, 0.7)
+				.content
+					.none-hover
+						opacity: 0
+						height: 0
+						display: none
+					.hover
+						opacity: 1
+						display: block
+						height: auto
+
+					.more 
+						width: 60px
+
+			// Animation des cartes avec dégradé
+
+			.card.deg-1
+				background-color: #4C4C4C
+				transition: all 0.7s ease-in-out
+
+			.card.deg-1:hover
+				background-color: #8496B0
+			
+			.card.deg-2
+				background-color: #555555
+				transition: all 0.7s ease-in-out
+			
+			.card.deg-2:hover
+				background-color: #7889A1
+
+			.card.deg-3
+				background-color: #626262
+				transition: all 0.7s ease-in-out
+
+			.card.deg-3:hover
+				background-color: #6B7A8F
+
+	.skills
+		width: 70%
+		min-width: 375px
+
+		margin: auto
+
+		.skills-content
+			@include display_flex()
+			@include vendor-prefix(justify-content, space-around)
+
+			.skills-box
+				width: 350px
+
+				padding: 50px
+
+				h2
+					font-family: 'Tahoma Bold', serif
+					font-size: 20px
+					font-weight: normal
+					margin-bottom: 5px
+					margin-top: 5px
+					color: #323232
+				h3
+					font-size: 20px
+					margin-bottom: 10px
+					font-weight: normal
+					font-family: 'Libre Baskerville', serif
+
+				ul
+					margin-left: 25px
+					li
+						padding: 5px
+						font-size: 15px
+						color: rgba(26,26,26,.75)
+
+
+
+.section-3:after
+	content: " "
+
+	background: $bgc-section-3 no-repeat center
+	background-size: 100% auto
+	
+	// Positionnement
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	position: absolute
+
+	box-shadow: 2px 2px $bgc-section-1
+
+	// Index
+	z-index: -1
+
+@media screen and (max-width: $heavy_view_treshold)
+	.section-3 .skills
+			width: 100%
+			.skills-content .skills-box
+					padding: 30px
+
+@media screen and (max-width: $medium_view_treshold)
+	.section-3 .skills .skills-content
+			@include vendor-prefix(flex-flow, column)
+			.skills-box
+				padding: 15px
+				h2
+					font-size: 22px
+				h3
+					font-size: 15px
+					margin-bottom: 0
+				ul li
+					font-size: 13px

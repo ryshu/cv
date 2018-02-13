@@ -1,0 +1,171 @@
+.section-1
+	padding: 100px 50px
+
+	background-color: $bgc-section-1
+	box-shadow: 5px 5px $bgc-section-1
+
+	.text
+		width: 75%
+		margin: auto
+		table
+			width: 100%
+			tr
+				width: 100%
+				td
+					width: 50%
+					padding: 20px
+					vertical-align: top
+
+					h2
+						font-size: 20px
+						font-family: 'Bitter', serif
+
+						margin-bottom: 5px
+						margin-top: 5px
+
+					.para
+						padding: 10px 50px 10px 20px
+						p
+							text-align: justify
+							padding: 7px 0
+							font-style: italic
+							font-size: 18px
+							color: rgba(26, 26, 26, 0.75)
+
+				td:first-child
+					border-right: 3px dotted
+
+				td:last-child
+					position: relative
+					padding-right: 40px					
+					table
+						width: 65%
+						margin: auto
+						tr
+							td
+								padding: 10px
+								border: none
+								vertical-align: top
+								color: rgba(26, 26, 26, 0.75)
+								a
+									text-decoration: none
+									color: rgba(26, 26, 26, 0.75)
+							td:first-child
+								text-align: right
+								font-weight: bold
+								color: #000!important
+
+					.links
+						@include display_flex()
+						@include vendor-prefix(justify-content, space-around)
+						@include vendor-prefix(flex-flow, column)
+
+						height: 250px
+
+						position: absolute
+						right: 0
+						a
+							@include flex_centered()
+
+							width: 38px
+							height: 38px
+							
+							text-decoration: none
+							color: #333
+							font-size: 1.6em
+							transition: all 300ms ease-in-out
+
+						a:hover
+							color: #666
+							font-size: 1.8em
+
+@media screen and (max-width: $heavy_view_treshold)
+	.section-1 .text
+		width: 100%
+		.profil
+			@include display_flex()
+			@include vendor-prefix(flex-flow, wrap)
+			h2
+				width: 100%
+				font-size: 20px
+				font-family: 'Bitter', serif
+				margin: 15px 10px
+
+			.para
+				padding: 10px 70px 10px 20px
+				p
+					text-align: justify
+					padding: 7px 0
+					font-style: italic
+					font-size: 18px
+					color: rgba(26, 26, 26, 0.75)
+
+		.contact
+			@include display_flex()
+			@include vendor-prefix(flex-flow, wrap)
+			h2
+				width: 100%
+				font-size: 20px
+				font-family: 'Bitter', serif
+
+				margin: 15px 10px
+			table
+				width: 80%
+				tr
+					td
+						padding: 10px
+						border: none
+						vertical-align: top
+						color: rgba(26, 26, 26, 0.75)
+						a
+							text-decoration: none
+							color: rgba(26, 26, 26, 0.75)
+
+					td:first-child
+						text-align: right
+						font-weight: bold
+						color: #000!important
+
+			.links
+				@include display_flex()
+				@include vendor-prefix(justify-content, space-around)
+				@include vendor-prefix(flex-flow, column)
+
+				height: 250px
+				width: 20%
+				a
+					@include flex_centered()
+
+					width: 38px
+					height: 38px
+					
+					text-decoration: none
+					color: #333
+					font-size: 1.6em
+					transition: all 300ms ease-in-out
+
+				a:hover
+					color: #666
+					font-size: 1.8em
+
+@media screen and (max-width: $medium_view_treshold)
+	.section-1
+		padding: 20px
+		.text 
+			table tr td h2
+				font-size: 16px
+
+			.profil h2
+				font-size: 16px
+			.contact 
+				table tr td
+					font-size: 12px
+				.links
+					@include vendor-prefix(flex-flow, wrap)
+					width: 100%
+					height: 30px
+					a
+						font-size: 1.2em
+					a:hover
+						font-size: 1.4em
+
