@@ -1,0 +1,8 @@
+{
+    "require": {
+        "silex/silex": "~2.0",
+        "doctrine/dbal": "~2.2",
+        "symfony/twig-bridge": "~2.3",
+        "mheap/silex-markdown": "^2.0"
+    }
+}

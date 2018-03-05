@@ -1,0 +1,54 @@
+{% extends 'layout.html.twig' %}
+
+{% block meta %}
+	<meta name="robots" content="noindex, nofollow">
+
+	<link rel="canonical" href="http://www.oscarmarietaillefer.com/portfolio" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+
+{% block headtitle %}
+	Oscar Marie--Taillefer | Portfolio
+{% endblock %}
+
+{% block title %}
+	<a title="Télécharger le CV" href="doc/cv_oscar_marie--taillefer.pdf" download="CV Oscar MARIE--TAILLEFER.pdf">Télécharger le CV</a>
+	<h1>Mes projets</h1>
+{% endblock %}
+
+{% block content %}
+	<section>
+		<div class="cards">
+			{% for card in cards %}
+			<div class="card">
+				<a href="/portfolio{{ card.id }}">
+					<div class="card_thumb"> 
+						<img src="img/projets/{{card.img_path }}">
+					</div>
+					<div class="card_body">
+						<div class="card_category">
+							{{ card.category }}
+						</div>
+						<div class="card_title">
+							{{ card.title }}
+						</div>
+						<div class="card_subtitle">
+							{{ card.subtitle }}
+						</div>
+						<div class="card_description">
+							{{ card.meta_description }}
+						</div>
+						<div class="card_footer">
+							<span class="icone icone-comment"> </span>{{ card.date }}
+						</div>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endblock %}
+
+{% block addcss %}
+	<link rel="stylesheet" href="css/portfolio.css" />
+{% endblock %}

@@ -1,0 +1,405 @@
+@font-face {
+  font-family: "Tahoma Bold";
+  src: url("font/Tahoma Bold.ttf") format("truetype"); }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #f5f5f5;
+  width: 100vw; }
+  body h2 {
+    padding: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: "Libre Baskerville", serif;
+    text-align: center; }
+  body header {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 860px;
+    transition: height 300ms ease-in-out; }
+    body header .content {
+      -webkit-justify-content: center;
+      -webkit-align-items: center;
+      display: -webkit-flex;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+      body header .content nav {
+        position: absolute;
+        right: 50px;
+        top: 20px; }
+        body header .content nav a {
+          margin: 15px;
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold; }
+        body header .content nav a:hover {
+          color: #d0d0d0; }
+        body header .content nav a.icon {
+          display: none; }
+      body header .content .title {
+        height: 50px;
+        width: 650px;
+        margin: auto;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: column;
+        flex-flow: column;
+        -moz-flex-flow: column;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        -moz-justify-content: space-around;
+        -webkit-align-items: center;
+        align-items: center;
+        -moz-align-items: center;
+        transform: translateY(0px);
+        transition: transform 300ms ease-in-out; }
+        body header .content .title a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: #fff;
+          font-size: 25px;
+          border: 2px solid #fff;
+          padding: 7px;
+          transition: all 300ms ease-in-out; }
+        body header .content .title a:hover {
+          padding-bottom: 7px;
+          background-color: #f2f2f2;
+          color: #000; }
+        body header .content .title h1 {
+          text-align: center;
+          font-weight: bold;
+          font-family: "Bitter", serif;
+          font-size: 55px;
+          color: #fff;
+          margin: 20px; }
+        body header .content .title img {
+          margin: 20px;
+          width: 200px;
+          height: 200px;
+          border: 5px solid #fff;
+          border-radius: 120px; }
+  body header:after {
+    content: " ";
+    background: url("../img/laptop-and-coffee.jpg") no-repeat center;
+    background-size: 100% 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -2;
+    opacity: 0.8; }
+  body header:before {
+    content: " ";
+    background-color: rgba(26, 26, 26, 0.8);
+    background-size: 100vw 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1; }
+  @media screen and (max-width: 1280px) {
+    body header {
+      height: 600px; } }
+  @media screen and (max-width: 800px) {
+    body header {
+      height: 450px; }
+      body header .content nav a {
+        opacity: 0; }
+      body header .content nav a.icon {
+        float: right;
+        display: block;
+        opacity: 1; }
+      body header .content .title a {
+        font-size: 18px; }
+      body header .content .title h1 {
+        font-size: 35px; }
+      body header .content .title img {
+        width: 150px;
+        height: 150px;
+        border: 3px solid #fff; }
+    body header.responsive {
+      height: 550px; }
+      body header.responsive .content nav a {
+        opacity: 1;
+        float: none;
+        display: block;
+        text-align: right; }
+      body header.responsive .title {
+        transform: translateY(100px); } }
+  @media screen and (max-width: 550px) {
+    body header {
+      width: 100%;
+      height: 400px; }
+      body header .content .title a {
+        font-size: 14px; }
+      body header .content .title h1 {
+        font-size: 30px; }
+      body header .content .title img {
+        width: 100px;
+        height: 100px;
+        border: 3px solid #fff; }
+    body header:after {
+      background-size: auto 100%; } }
+  body section {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: space-around;
+    align-items: space-around;
+    -moz-align-items: space-around;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+    -moz-flex-flow: column;
+    position: relative; }
+  body .section-1 {
+    padding: 100px 50px;
+    background-color: #e2e2e2;
+    box-shadow: 5px 5px #e2e2e2; }
+    body .section-1 .text {
+      width: 75%;
+      margin: auto; }
+      body .section-1 .text .para {
+        font-size: 18px;
+        text-align: justify; }
+  @media screen and (max-width: 1280px) {
+    body .section-1 .text {
+      width: 80%; }
+      body .section-1 .text .para {
+        font-size: 16px; } }
+  @media screen and (max-width: 800px) {
+    body .section-1 {
+      padding: 20px; } }
+  @media screen and (max-width: 550px) {
+    body .section-1 .text {
+      width: 95%; }
+      body .section-1 .text .para {
+        font-size: 14px; } }
+  body .section-2 {
+    width: 100vw;
+    padding: 50px;
+    background-color: #f5f5f5; }
+    body .section-2 .cards {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      justify-content: space-around;
+      -moz-justify-content: space-around;
+      -webkit-align-items: center;
+      align-items: center;
+      -moz-align-items: center;
+      -webkit-flex-flow: wrap;
+      flex-flow: wrap;
+      -moz-flex-flow: wrap;
+      width: 80%;
+      margin: auto;
+      padding-bottom: 20px;
+      padding-top: 20px; }
+      body .section-2 .cards .card {
+        display: block;
+        position: relative;
+        width: 30%;
+        min-width: 350px;
+        cursor: pointer;
+        margin: 15px;
+        box-shadow: 0px 0px 5px rgba(200, 200, 200, 0.7); }
+        body .section-2 .cards .card .content {
+          -webkit-justify-content: center;
+          -webkit-align-items: center;
+          display: -webkit-flex;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          transition: all 300ms ease-in-out; }
+          body .section-2 .cards .card .content .text .none-hover {
+            height: auto;
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            font-weight: none; }
+            body .section-2 .cards .card .content .text .none-hover p {
+              font-weight: bold;
+              font-size: 22px; }
+          body .section-2 .cards .card .content .text .hover {
+            height: 0;
+            display: none;
+            margin: 30px;
+            text-align: justify;
+            font-size: 18px; }
+            body .section-2 .cards .card .content .text .hover h2 {
+              font-size: 20px;
+              margin-bottom: 5px;
+              margin-top: 5px; }
+            body .section-2 .cards .card .content .text .hover .para {
+              margin-left: 20px;
+              font-weight: none;
+              font-size: 16px; }
+        body .section-2 .cards .card .content:hover .text .none-hover {
+          height: 0;
+          display: none; }
+        body .section-2 .cards .card .content:hover .text .hover {
+          height: auto;
+          display: block; }
+      body .section-2 .cards .card:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%; }
+      body .section-2 .cards .card-1:after {
+        background: url("../img/ibc-dialog.jpg") no-repeat center; }
+      body .section-2 .cards .card-2:after {
+        background: url("../img/cfai.jpg") no-repeat center; }
+      body .section-2 .cards .card-3:after {
+        background: url("../img/supplay.jpg") no-repeat center; }
+  @media screen and (max-width: 1700px) {
+    body .section-2 .cards .card .content .text .hover {
+      font-size: 16px; }
+      body .section-2 .cards .card .content .text .hover h2 {
+        font-size: 18px; }
+      body .section-2 .cards .card .content .text .hover .para {
+        font-size: 14px; } }
+  @media screen and (max-width: 550px) {
+    body .section-2 .cards .card .content .text .hover {
+      height: auto;
+      display: block; }
+    body .section-2 .cards .card .content .text .none-hover {
+      height: 0;
+      display: none; } }
+  body .section-3 {
+    width: 100vw;
+    padding: 50px;
+    background-color: #e2e2e2; }
+    body .section-3 .para {
+      width: 60%;
+      margin: auto;
+      padding-bottom: 20px;
+      line-height: 2;
+      font-size: 20px; }
+      body .section-3 .para p {
+        text-align: center;
+        font-style: italic; }
+  body .section-3:after {
+    content: " ";
+    background: #f5f5f5 no-repeat center;
+    background-size: 100% auto;
+    box-shadow: 2px 2px #e2e2e2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1; }
+  @media screen and (max-width: 1280px) {
+    body .section-3 {
+      padding: 15px; }
+      body .section-3 .para {
+        width: 100%; }
+        body .section-3 .para p {
+          padding: 10px; } }
+  @media screen and (max-width: 800px) {
+    body .section-3 {
+      padding: 10px; }
+      body .section-3 .para {
+        font-size: 18px; } }
+  @media screen and (max-width: 550px) {
+    body .section-3 {
+      padding: 10px 0; }
+      body .section-3 .para {
+        font-size: 16px; } }
+  body footer {
+    width: 100vw;
+    padding: 60px 30px;
+    margin: auto;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #d0d0d0; }
+    body footer .content {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      justify-content: space-around;
+      -moz-justify-content: space-around;
+      -webkit-flex-flow: column;
+      flex-flow: column;
+      -moz-flex-flow: column;
+      -webkit-align-items: center;
+      align-items: center;
+      -moz-align-items: center;
+      width: 750px;
+      min-width: 300px;
+      padding: 20px; }
+      body footer .content nav a {
+        margin: 15px;
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: all 300ms ease-in-out; }
+      body footer .content nav a:hover {
+        color: #505050; }
+      body footer .content .links {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-around;
+        justify-content: space-around;
+        -moz-justify-content: space-around;
+        -webkit-align-items: center;
+        align-items: center;
+        -moz-align-items: center;
+        width: 200px;
+        padding: 20px; }
+        body footer .content .links a {
+          -webkit-justify-content: center;
+          -webkit-align-items: center;
+          display: -webkit-flex;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          width: 38px;
+          height: 38px;
+          font-size: 1.4em;
+          color: #323232;
+          text-decoration: none;
+          transition: all 500ms ease-in-out; }
+        body footer .content .links a:hover {
+          color: #606060;
+          font-size: 1.6em; }
+      body footer .content .copyright {
+        font-size: 10px;
+        font-family: "Bitter", serif;
+        padding: 10px; }
+  @media screen and (max-width: 800px) {
+    body footer .content nav {
+      text-align: center; } }
+  @media screen and (max-width: 550px) {
+    body footer {
+      padding: 10px 20px; }
+      body footer .content nav a {
+        margin: 10px; } }
+
+/*# sourceMappingURL=default.css.map */

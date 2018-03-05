@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block meta %}
+	<meta name="robots" content="noindex, nofollow">
+
+	<link rel="canonical" href="http://www.oscarmarietaillefer.com/portfolio/{{ card.id}}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+
+{% block headtitle %}
+	Oscar Marie--Taillefer | {{ card.title }}
+{% endblock %}
+
+{% block title %}
+	<h1>Projet : {{ card.title }}</h1>
+	<img src="img/projets/thumb/{{ card.img_path }}" alt=""/>
+{% endblock %}
+
+{% block content %}
+	<section>
+		<h2>{{ card.subtitle }}</h2>
+		<div class="project_description markdown-body">
+			{{ card.description | markdown }}
+		</div>
+	</section>
+{% endblock %}
+
+{% block addcss %}
+	<link rel="stylesheet" href="css/portfolio.css" />
+	<link rel="stylesheet" type="text/css" href="css/markdown.css">
+{% endblock %}

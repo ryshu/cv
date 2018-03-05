@@ -1,0 +1,81 @@
+$gris-fonce : #393E46
+
+$bgc-section-1 : #e2e2e2
+$bgc-section-2 : #f5f5f5
+$bgc-section-3 : #d0d0d0
+
+$bgc: #d0d0d0
+$bgc-footer: #d0d0d0
+
+$font: #000
+$font-hover : #000
+
+$mobile_view_treshold: 550px
+$medium_view_treshold: 800px
+$heavy_view_treshold: 1280px
+
+@font-face
+	font-family: 'Tahoma Bold'
+	src: url('font/Tahoma Bold.ttf') format('truetype')
+
+@mixin vendor-prefix($name, $value)
+	@each $vendor in ('-webkit-', '', '-moz-')
+		#{$vendor}#{$name}: #{$value}
+
+@mixin display_flex()
+	@each $vendor in ('-webkit-', '')
+		display: #{$vendor}flex
+
+@mixin justify_center()
+	@each $vendor in ('-webkit-', '')
+		#{$vendor}justify-content: center
+
+@mixin flex_centered()
+	@each $vendor in ('-webkit-', '')
+		#{$vendor}justify-content: center
+		#{$vendor}align-items: center
+		display: #{$vendor}flex
+
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+
+html
+	height: 100%
+body
+	overflow-x: hidden
+	padding: 0
+	margin: 0
+	font-family: 'Open Sans', sans-serif
+
+	background-color: $bgc-section-2
+
+	width: 100vw
+
+	h2
+		padding: 30px
+
+		font-size: 32px
+		font-weight: bold
+		font-family: 'Libre Baskerville', serif
+		text-align: center
+
+	@import "header"
+
+	section
+		@include display_flex()
+		@include justify_center()
+		@include vendor-prefix(align-items, space-around)
+		@include vendor-prefix(flex-flow, column)
+
+		position: relative
+
+	@import "section-1"
+
+	@import "section-2"
+
+	@import "section-3"
+
+	@import "footer"
+

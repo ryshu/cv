@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Tahoma Bold";
+  src: url("font/Tahoma Bold.ttf") format("truetype"); }
+body header:after {
+  background-image: url("../img/baton-diable.jpg") !important; }
+
+body header:before {
+  background-color: rgba(26, 26, 26, 0.75); }
+
+body {
+  background-color: #d0d0d0;
+  overflow-x: hidden; }
+
+section.graphisme {
+  background-color: #eeeeee;
+  padding-bottom: 200px;
+  padding-top: 100px; }
+
+section.longboard {
+  background-color: #d0d0d0;
+  padding-bottom: 200px; }
+
+section.benevolat {
+  background-color: #eeeeee;
+  padding-bottom: 100px; }
+  section.benevolat .content .flex-img {
+    display: block;
+    width: 200px;
+    float: right;
+    margin: 0 20px 0 30px; }
+    section.benevolat .content .flex-img img {
+      width: 100%; }
+
+section.hobbie {
+  width: 100%; }
+  section.hobbie .content {
+    width: 60%;
+    margin: auto; }
+    section.hobbie .content p {
+      width: 100%;
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      padding: 10px 0;
+      text-align: justify; }
+      section.hobbie .content p img {
+        width: 100%; }
+    section.hobbie .content blockquote {
+      padding: 0 1em;
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      text-align: justify;
+      color: #6a737d;
+      border-left: 0.25em solid #dfe2e5; }
+      section.hobbie .content blockquote p {
+        color: #000; }
+
+.ss-style-doublediagonal {
+  z-index: 1;
+  padding-top: 6em; }
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  background: #bbbbbb;
+  top: 0;
+  left: -25%;
+  z-index: -1;
+  width: 150%;
+  height: 75%;
+  background: inherit;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0; }
+
+.ss-style-doublediagonal::before {
+  height: 50%;
+  background: #bbbbbb;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0; }
+
+@media screen and (max-width: 1280px) {
+  section.hobbie .content {
+    width: 80%; } }
+@media screen and (max-width: 800px) {
+  section.hobbie {
+    overflow-x: hidden;
+    padding: 20px 5px; }
+    section.hobbie .content {
+      width: 95%; }
+      section.hobbie .content .flex-img {
+        float: none;
+        width: 200px;
+        margin: 10px auto; } }
+
+/*# sourceMappingURL=about.css.map */

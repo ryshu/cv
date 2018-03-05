@@ -1,0 +1,120 @@
+$back_color:#eeeeee
+$bgc-footer: #d0d0d0
+$bgc-longboard: #bbbbbb
+
+$mobile_view_treshold: 550px
+$medium_view_treshold: 800px
+$heavy_view_treshold: 1280px
+
+@font-face
+	font-family: 'Tahoma Bold'
+	src: url('font/Tahoma Bold.ttf') format('truetype')
+
+@mixin vendor-prefix($name, $value)
+	@each $vendor in ('-webkit-', '', '-moz-')
+		#{$vendor}#{$name}: #{$value}
+
+@mixin display_flex()
+	@each $vendor in ('-webkit-', '')
+		display: #{$vendor}flex
+
+body header:after
+	background-image: url("../img/baton-diable.jpg")!important
+
+body header:before
+	background-color: rgba(26,26,26,.75)
+
+body
+	background-color: $bgc-footer
+	overflow-x: hidden
+
+section.graphisme
+	background-color: $back_color
+	padding-bottom: 200px
+	padding-top: 100px
+	
+section.longboard
+	background-color: $bgc-footer
+	padding-bottom: 200px
+
+section.benevolat
+	background-color: $back_color
+	padding-bottom: 100px
+	.content
+		.flex-img
+			display: block
+			width: 200px
+			float: right
+			margin: 0 20px 0 30px
+			img
+				width: 100%
+
+section.hobbie
+	width: 100%
+	.content
+		width: 60%
+		margin: auto
+		p
+			width: 100%
+			font-family: 'Open Sans', sans-serif
+			font-size: 16px
+			padding: 10px 0
+			text-align: justify
+			img
+				width: 100%
+
+		blockquote
+			padding: 0 1em
+			font-family: 'Open Sans', sans-serif
+			font-size: 16px
+			text-align: justify
+			color: #6a737d
+			border-left: 0.25em solid #dfe2e5
+
+			p
+				color: #000
+
+.ss-style-doublediagonal
+
+	z-index: 1
+	padding-top: 6em
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after
+	position: absolute
+	content: ''
+	pointer-events: none
+	background: $bgc-longboard
+	top: 0
+	left: -25%
+	z-index: -1
+	width: 150%
+	height: 75%
+	background: inherit
+	-webkit-transform: rotate(-2deg)
+	transform: rotate(-2deg)
+	-webkit-transform-origin: 0 0
+	transform-origin: 0 0
+
+.ss-style-doublediagonal::before
+	height: 50%
+	background: $bgc-longboard
+	-webkit-transform: rotate(-3deg)
+	transform: rotate(-3deg)
+	-webkit-transform-origin: 3% 0
+	transform-origin: 3% 0
+
+@media screen and (max-width: $heavy_view_treshold)
+	section.hobbie .content
+		width: 80%
+
+@media screen and (max-width: $medium_view_treshold)
+	section.hobbie
+		overflow-x: hidden
+		padding: 20px 5px
+		.content
+			width: 95%
+			.flex-img
+				float: none
+				width: 200px
+				margin: 10px auto

@@ -1,0 +1,27 @@
+.section-1
+	padding: 100px 50px
+
+	background-color: $bgc-section-1
+	box-shadow: 5px 5px $bgc-section-1
+
+	.text
+		width: 75%
+		margin: auto
+		.para
+			font-size: 18px
+			text-align: justify
+
+@media screen and (max-width: $heavy_view_treshold)
+	.section-1 .text
+		width: 80%
+		.para
+			font-size: 16px
+
+@media screen and (max-width: $medium_view_treshold)
+	.section-1
+		padding: 20px
+@media screen and (max-width: $mobile_view_treshold)
+	.section-1 .text
+		width: 95%
+		.para
+			font-size: 14px

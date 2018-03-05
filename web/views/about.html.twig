@@ -1,0 +1,57 @@
+{% extends 'layout.html.twig' %}
+
+{% block meta %}
+	<meta name="robots" content="noindex, nofollow">
+
+	<link rel="canonical" href="http://www.oscarmarietaillefer.com/about" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+
+{% block headtitle %}
+	Oscar Marie--Taillefer | Mes passions
+{% endblock %}
+
+{% block title %}
+	<a title="Télécharger le CV" href="doc/cv_oscar_marie--taillefer.pdf" download="CV Oscar MARIE--TAILLEFER.pdf">Télécharger le CV</a>
+	<h1>Mes passions</h1>
+{% endblock %}
+
+{% block content %}
+	<section class="hobbie graphisme">
+		<h2>Le graphisme</h2>
+		<div class="content">
+			<blockquote>Le graphisme est la discipline qui consiste à créer, choisir et utiliser des éléments graphiques pour élaborer un objet de communication et/ou de culture. <p>"Wikipédia" | Le 04-03-2018 </p></blockquote>
+			<p>C'est lors de la création des différents sites web que j'ai pu exercer cette passion pour le graphisme. Le meilleur exemple d'application que je peux donner est la page d'accueil du site du gala de l'ENIB.</p>
+			<p><img src="img/projets/gala/home.jpg" alt="homepage" title="Page d'accueil du site" /></p>
+			<p>Le fond de la photo utilisée est le fond de la charte graphique choisie par les élèves organisant le gala. Je l'ai éclaircie en son centre pour attirer l'attention du public vers les informations données par cette image. Vient ensuite le titre, écrit avec une police graphique, mais lisible, pour rappeler le thème du gala tout en étant clair et lisible. Le "52" placé dans le chapeau rappel le numéro de l'édition de cet évènement. Vient ensuite l'homme au chapeau. Nous avons choisi cette figure, car elle représente le côté industriel et mécanique de la "Révolution industrielle" mais elle nous évoquait aussi le visage de l'affiche "I want You". Enfin, j'ai placé sur l'affiche les trois informations capitales de l'évènement qui sont la date, le lieu et le prix.</p>
+			<p>Nous avons ainsi une photo qui permet de communiquer en quelques secondes toutes les informations que viendraient chercher les différents visiteurs du site.</p>
+		</div>
+	</section>
+
+	<section class="hobbie longboard ss-style-doublediagonal">
+		<h2>La longboard</h2>
+		<div class="content">
+			<p>Le longboard est une planche à roulettes d'une largeur supérieure à celle d'un skateboard classique, qui permet notamment de circuler à des vitesses bien plus élevées que ce dernier. Ce qui me plaît dans la pratique du longboard est tout d'abord la vitesse et les sensations qu'il procure lors d'une descente. Mais c'est aussi et surtout la communauté de passionné qui est répartie dans toute la France et qui est toujours prêt à conseiller et aider les autres passionnés de ce sport.</p>
+			<p><img src="img/about/longboard.jpg" alt="longboard" title="Session de longboard à Caen" /></p>
+		</div>
+	</section>
+
+	<section class="hobbie benevolat ss-style-doublediagonal">
+		<h2>Le bénévolat</h2>
+		<div class="content">
+			<div class="flex-img">
+				<img src="img/about/element.jpg" title="Soirée à thème" />
+			</div>
+			<div class="block1">
+				<blockquote>Le bénévolat est une activité non rétribuée et librement choisie qui s'exerce en général au sein d'une institution sans but lucratif. <p>"Wikipédia" | Le 04-03-2018</p></blockquote>
+				<p>J'ai ainsi eu l'occasion de participer à des actions de bénévolat à plusieurs échelles. Tout d'abord lors des "Foulées du diabète" en 2017 où nous sommes allés avec mon club de jonglage faire des animations pour les coureurs. Mais c'est surtout au sein de la vie étudiante que je m'investis bénévolement.</p>
+				<p>Mes actions au sein de la vie étudiante de l'ENIB sont des services au bar étudiant, de l'animation de soirée avec le club sono et des installations de matériel lors des soirées à thème ou d'autres besoins ponctuels du bureau des élèves. Je propose aussi gratuitement mes services pour créer et maintenir des sites web tels que le site du gala ou le refaçonnage du site ENIB.NET qui est en cours de réflexion actuellement.</p>
+			</div>
+
+		</div>
+	</section>
+{% endblock %}
+
+{% block addcss %}
+	<link rel="stylesheet" href="css/about.css" />
+{% endblock %}
