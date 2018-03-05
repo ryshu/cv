@@ -33,4 +33,8 @@ To install silex, run in the folder:
 ```
 composer update
 ```
+### Config
+
+You need to change file web\index.php to setup your own database config
+
 You should now be able to connect the website.
