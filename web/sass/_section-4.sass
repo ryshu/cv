@@ -1,0 +1,55 @@
+.section-4
+	width: 100vw
+	padding: 50px
+
+	background-color: $bgc-section-2
+
+	.para
+		width: 60%
+
+		margin: auto
+		padding-bottom: 20px
+		
+		line-height: 2
+		font-size: 20px
+		p
+			text-align: center
+			font-style: italic
+
+.section-4:after
+	content: " "
+
+	background: $bgc-section-4 no-repeat center
+	background-size: 100% auto
+
+	box-shadow: 2px 2px $bgc-section-1
+	
+	// Positionnement
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	position: absolute
+
+	// Index
+	z-index: -1
+
+@media screen and (max-width: $heavy_view_treshold)
+	.section-4
+		padding: 15px
+		.para
+			width: 100%
+			p
+				padding: 10px
+
+@media screen and (max-width: $medium_view_treshold)
+	.section-4
+		padding: 10px
+		.para
+			font-size: 18px
+
+@media screen and (max-width: $mobile_view_treshold)
+	.section-4
+		padding: 10px 0
+		.para
+			font-size: 16px
